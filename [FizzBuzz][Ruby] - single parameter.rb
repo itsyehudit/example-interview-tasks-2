@@ -1,4 +1,4 @@
-def FizzBuzz(isFB)
+def fizzBuzz(isFB)
   if
     isFB%3 === 0 && isFB%5 === 0
     "FizzBuzz"
@@ -11,4 +11,4 @@ def FizzBuzz(isFB)
   end
 end
 
-puts FizzBuzz(gets.to_i)
+puts fizzBuzz(gets.to_i)
