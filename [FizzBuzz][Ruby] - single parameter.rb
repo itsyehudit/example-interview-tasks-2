@@ -11,4 +11,6 @@ def fizzBuzz(isFB)
   end
 end
 
+puts "Pick a number:"
+
 puts fizzBuzz(gets.to_i)
