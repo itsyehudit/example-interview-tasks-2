@@ -1,16 +1,16 @@
 def fizzBuzz(isFB)
   if
     isFB%3 === 0 && isFB%5 === 0
-    "FizzBuzz"
+    puts "FizzBuzz"
   elsif isFB%3 === 0
-    "Fizz"
+    puts "Fizz"
   elsif isFB%5 === 0
-    "Buzz"
+    puts "Buzz"
   else
-    "No FizzBuz for you, sport!"
+    puts "No FizzBuz for you, sport!"
   end
 end
 
 puts "Pick a number:"
 
-puts fizzBuzz(gets.to_i)
+fizzBuzz(gets.to_i)
