@@ -9,7 +9,7 @@ def fizzBuzz(isFB)
     elsif isFB%5 === 0
       puts "Buzz"
     else
-      puts "No FizzBuz for you, sport!"
+      puts "No FizzBuzz for you, sport!"
     end
   end
 
