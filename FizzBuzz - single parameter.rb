@@ -13,8 +13,15 @@ def fizzBuzz(isFB)
     end
   end
 
+  def isNumber(isNum)
+    isNum = isNum.to_s
+    /\A[+-]?\d+(\.[\d]+)?\z/.match isNum
+  end
+
   if isFB%1 === 0
     printFizzBuzz(isFB)
+  elsif isFB === "" || isNumber(isFB) === false
+    puts "Improper value, try again."
   else
     puts "Would you like to round your number #{isFB}? Y/N"
     q = gets.chomp
@@ -29,4 +36,4 @@ end
 
 puts "Pick a number:"
 
-fizzBuzz(gets.to_f)
+fizzBuzz(gets.chomp)
