@@ -21,7 +21,6 @@ def fizzBuzz(isFB)
   if isNumber(isFB)
     isFB = isFB.to_f
     if isFB%1 === 0
-      printFizzBuzz(isFB)
     else
       puts "Would you like to round your number #{isFB}? Y/N"
       q = gets.chomp
@@ -30,15 +29,12 @@ def fizzBuzz(isFB)
         updown = gets.chomp
         if updown === "y" || updown === "Y"
           isFB = isFB.ceil
-          printFizzBuzz(isFB)
         else
           isFB = isFB.floor
-          printFizzBuzz(isFB)
         end
-      else
-        printFizzBuzz(isFB)
       end
     end
+    printFizzBuzz(isFB)
   else
     puts "Improper value, try again."
   end
