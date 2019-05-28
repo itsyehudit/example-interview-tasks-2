@@ -18,19 +18,22 @@ def fizzBuzz(isFB)
     /\A[+-]?\d+(\.[\d]+)?\z/.match isNum
   end
 
-  if isFB%1 === 0
-    printFizzBuzz(isFB)
-  elsif isFB === "" || isNumber(isFB) === false
-    puts "Improper value, try again."
-  else
-    puts "Would you like to round your number #{isFB}? Y/N"
-    q = gets.chomp
-    if q === "y" || q === "Y"
-      isFB = isFB.round
+  if isNumber(isFB)
+    isFB = isFB.to_f
+    if isFB%1 === 0
       printFizzBuzz(isFB)
     else
-      printFizzBuzz(isFB)
+      puts "Would you like to round your number #{isFB}? Y/N"
+      q = gets.chomp
+      if q === "y" || q === "Y"
+        isFB = isFB.round
+        printFizzBuzz(isFB)
+      else
+        printFizzBuzz(isFB)
+      end
     end
+  else
+    puts "Improper value, try again."
   end
 end
 
