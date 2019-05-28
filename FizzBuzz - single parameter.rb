@@ -28,8 +28,10 @@ def fizzBuzz(isFB)
         puts "Would you like to round your number #{isFB} UP? Y/N"
         updown = gets.chomp
         if updown === "y" || updown === "Y"
+          puts "Your number #{isFB} will be rounded UP."
           isFB = isFB.ceil
         else
+          puts "Your number #{isFB} will be rounded DOWN."
           isFB = isFB.floor
         end
       end
