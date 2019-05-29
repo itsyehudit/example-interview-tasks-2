@@ -2,11 +2,11 @@ def fizzBuzz(isFB)
 
   def printFizzBuzz(isFB)
     if
-      isFB%3 === 0 && isFB%5 === 0
+      isFB%3 == 0 && isFB%5 == 0
       puts "FizzBuzz"
-    elsif isFB%3 === 0
+    elsif isFB%3 == 0
       puts "Fizz"
-    elsif isFB%5 === 0
+    elsif isFB%5 == 0
       puts "Buzz"
     else
       puts "No FizzBuzz for you, sport!"
@@ -20,14 +20,14 @@ def fizzBuzz(isFB)
 
   if isNumber(isFB)
     isFB = isFB.to_f
-    if isFB%1 === 0
+    if isFB%1 == 0
     else
       puts "Would you like to round your number #{isFB}? Y/N"
       q = gets.chomp
-      if q === "y" || q === "Y"
+      if q == "y" || q == "Y"
         puts "Would you like to round your number #{isFB} UP? Y/N"
         updown = gets.chomp
-        if updown === "y" || updown === "Y"
+        if updown == "y" || updown == "Y"
           puts "Your number #{isFB} will be rounded UP."
           isFB = isFB.ceil
         else
