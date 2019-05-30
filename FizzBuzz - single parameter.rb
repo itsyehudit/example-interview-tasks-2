@@ -43,5 +43,7 @@ def fizz_buzz(is_fb)
 end
 
 puts "Pick a number:"
+initial_input = gets.chomp
+initial_input = initial_input.gsub(/,/, '.')
 
-fizz_buzz(gets.chomp)
+fizz_buzz(initial_input)
