@@ -23,11 +23,11 @@ def fizz_buzz(is_fb)
     if is_fb%1 == 0
     else
       puts "Would you like to round your number #{is_fb}? Y/N"
-      q = gets.chomp
-      if q == "y" || q == "Y"
+      q = gets.chomp.downcase
+      if q == "y"
         puts "Would you like to round your number #{is_fb} UP? Y/N"
-        updown = gets.chomp
-        if updown == "y" || updown == "Y"
+        updown = gets.chomp.downcase
+        if updown == "y"
           puts "Your number #{is_fb} will be rounded UP."
           is_fb = is_fb.ceil
         else
