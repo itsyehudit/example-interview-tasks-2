@@ -1,42 +1,42 @@
-def fizzBuzz(isFB)
+def fizz_buzz(is_fb)
 
-  def printFizzBuzz(isFB)
+  def print_fizz_buzz(is_fb)
     if
-      isFB%3 == 0 && isFB%5 == 0
+      is_fb%3 == 0 && is_fb%5 == 0
       puts "FizzBuzz"
-    elsif isFB%3 == 0
+    elsif is_fb%3 == 0
       puts "Fizz"
-    elsif isFB%5 == 0
+    elsif is_fb%5 == 0
       puts "Buzz"
     else
       puts "No FizzBuzz for you, sport!"
     end
   end
 
-  def isNumber(isNum)
-    isNum = isNum.to_s
-    /\A[+-]?\d+(\.[\d]+)?\z/.match isNum
+  def is_number(is_num)
+    is_num = is_num.to_s
+    /\A[+-]?\d+(\.[\d]+)?\z/.match is_num
   end
 
-  if isNumber(isFB)
-    isFB = isFB.to_f
-    if isFB%1 == 0
+  if is_number(is_fb)
+    is_fb = is_fb.to_f
+    if is_fb%1 == 0
     else
-      puts "Would you like to round your number #{isFB}? Y/N"
+      puts "Would you like to round your number #{is_fb}? Y/N"
       q = gets.chomp
       if q == "y" || q == "Y"
-        puts "Would you like to round your number #{isFB} UP? Y/N"
+        puts "Would you like to round your number #{is_fb} UP? Y/N"
         updown = gets.chomp
         if updown == "y" || updown == "Y"
-          puts "Your number #{isFB} will be rounded UP."
-          isFB = isFB.ceil
+          puts "Your number #{is_fb} will be rounded UP."
+          is_fb = is_fb.ceil
         else
-          puts "Your number #{isFB} will be rounded DOWN."
-          isFB = isFB.floor
+          puts "Your number #{is_fb} will be rounded DOWN."
+          is_fb = is_fb.floor
         end
       end
     end
-    printFizzBuzz(isFB)
+    print_fizz_buzz(is_fb)
   else
     puts "Improper value, try again."
   end
@@ -44,4 +44,4 @@ end
 
 puts "Pick a number:"
 
-fizzBuzz(gets.chomp)
+fizz_buzz(gets.chomp)
