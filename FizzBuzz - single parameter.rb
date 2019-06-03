@@ -21,26 +21,30 @@ def fizz_buzz
     is_fb = Float(is_fb)
   rescue
     puts "Improper value, try again."
-    exit
+    is_float = false
   end
 
-  if is_fb%1 == 0
+  if is_float == false
+    fizz_buzz
   else
-    puts "Would you like to round your number #{is_fb}? Y/N"
-    q = gets.chomp.downcase
-    if q == "y"
-      puts "Would you like to round your number #{is_fb} UP? Y/N"
-      updown = gets.chomp.downcase
-      if updown == "y"
-        puts "Your number #{is_fb} will be rounded UP."
-        is_fb = is_fb.ceil
-      else
-        puts "Your number #{is_fb} will be rounded DOWN."
-        is_fb = is_fb.floor
+    if is_fb%1 == 0
+    else
+      puts "Would you like to round your number #{is_fb}? Y/N"
+      q = gets.chomp.downcase
+      if q == "y"
+        puts "Would you like to round your number #{is_fb} UP? Y/N"
+        updown = gets.chomp.downcase
+        if updown == "y"
+          puts "Your number #{is_fb} will be rounded UP."
+          is_fb = is_fb.ceil
+        else
+          puts "Your number #{is_fb} will be rounded DOWN."
+          is_fb = is_fb.floor
+        end
       end
     end
+    print_fizz_buzz(is_fb)
   end
-  print_fizz_buzz(is_fb)
 end
 
 fizz_buzz
