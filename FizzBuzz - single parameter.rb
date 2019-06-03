@@ -1,3 +1,8 @@
+def is_number(is_num)
+  is_num = is_num.to_s
+  /\A[+-]?\d+(\.[\d]+)?\z/.match is_num
+end
+
 def fizz_buzz(is_fb)
 
   def print_fizz_buzz(is_fb)
@@ -11,11 +16,6 @@ def fizz_buzz(is_fb)
     else
       puts "No FizzBuzz for you, sport!"
     end
-  end
-
-  def is_number(is_num)
-    is_num = is_num.to_s
-    /\A[+-]?\d+(\.[\d]+)?\z/.match is_num
   end
 
   if is_number(is_fb)
