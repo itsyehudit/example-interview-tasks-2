@@ -1,8 +1,3 @@
-def is_number(is_num)
-  is_num = is_num.to_s
-  /\A[+-]?\d+(\.[\d]+)?\z/.match is_num
-end
-
 def fizz_buzz(is_fb)
 
   def print_fizz_buzz(is_fb)
@@ -18,28 +13,30 @@ def fizz_buzz(is_fb)
     end
   end
 
-  if is_number(is_fb)
-    is_fb = is_fb.to_f
-    if is_fb%1 == 0
-    else
-      puts "Would you like to round your number #{is_fb}? Y/N"
-      q = gets.chomp.downcase
-      if q == "y"
-        puts "Would you like to round your number #{is_fb} UP? Y/N"
-        updown = gets.chomp.downcase
-        if updown == "y"
-          puts "Your number #{is_fb} will be rounded UP."
-          is_fb = is_fb.ceil
-        else
-          puts "Your number #{is_fb} will be rounded DOWN."
-          is_fb = is_fb.floor
-        end
+  begin
+    is_fb = Float(is_fb)
+  rescue
+    puts "Improper value, try again."
+    exit
+  end
+
+  if is_fb%1 == 0
+  else
+    puts "Would you like to round your number #{is_fb}? Y/N"
+    q = gets.chomp.downcase
+    if q == "y"
+      puts "Would you like to round your number #{is_fb} UP? Y/N"
+      updown = gets.chomp.downcase
+      if updown == "y"
+        puts "Your number #{is_fb} will be rounded UP."
+        is_fb = is_fb.ceil
+      else
+        puts "Your number #{is_fb} will be rounded DOWN."
+        is_fb = is_fb.floor
       end
     end
-    print_fizz_buzz(is_fb)
-  else
-    puts "Improper value, try again."
   end
+  print_fizz_buzz(is_fb)
 end
 
 puts "Pick a number:"
