@@ -1,4 +1,8 @@
-def fizz_buzz(is_fb)
+def fizz_buzz
+
+  puts "Pick a number:"
+  is_fb = gets.chomp
+  is_fb = is_fb.gsub(/,/, '.')
 
   def print_fizz_buzz(is_fb)
     if
@@ -39,8 +43,4 @@ def fizz_buzz(is_fb)
   print_fizz_buzz(is_fb)
 end
 
-puts "Pick a number:"
-initial_input = gets.chomp
-initial_input = initial_input.gsub(/,/, '.')
-
-fizz_buzz(initial_input)
+fizz_buzz
