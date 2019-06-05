@@ -1,21 +1,20 @@
-def fizz_buzz
+def print_fizz_buzz(is_fb)
+  if
+    is_fb%3 == 0 && is_fb%5 == 0
+    puts "FizzBuzz"
+  elsif is_fb%3 == 0
+    puts "Fizz"
+  elsif is_fb%5 == 0
+    puts "Buzz"
+  else
+    puts "No FizzBuzz for you, sport!"
+  end
+end
 
+def fizz_buzz
   puts "Pick a number:"
   is_fb = gets.chomp
   is_fb = is_fb.gsub(/,/, '.')
-
-  def print_fizz_buzz(is_fb)
-    if
-      is_fb%3 == 0 && is_fb%5 == 0
-      puts "FizzBuzz"
-    elsif is_fb%3 == 0
-      puts "Fizz"
-    elsif is_fb%5 == 0
-      puts "Buzz"
-    else
-      puts "No FizzBuzz for you, sport!"
-    end
-  end
 
   begin
     is_fb = Float(is_fb)
