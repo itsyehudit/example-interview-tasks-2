@@ -13,11 +13,11 @@ end
 
 def fizz_buzz
   puts "Pick a number:"
-  is_fb = gets.chomp
-  is_fb = is_fb.gsub(/,/, '.')
+  input = gets.chomp
+  input = input.gsub(/,/, '.')
 
   begin
-    is_fb = Float(is_fb)
+    input = Float(input)
   rescue ArgumentError => e
     puts "Improper value: #{e.class.name}, try again."
     is_float = false
@@ -26,23 +26,23 @@ def fizz_buzz
   if is_float == false
     fizz_buzz
   else
-    if is_fb%1 == 0
+    if input%1 == 0
     else
-      puts "Would you like to round your number #{is_fb}? Y/N"
+      puts "Would you like to round your number #{input}? Y/N"
       q = gets.chomp.downcase
       if q == "y"
-        puts "Would you like to round your number #{is_fb} UP? Y/N"
+        puts "Would you like to round your number #{input} UP? Y/N"
         updown = gets.chomp.downcase
         if updown == "y"
-          puts "Your number #{is_fb} will be rounded UP."
-          is_fb = is_fb.ceil
+          puts "Your number #{input} will be rounded UP."
+          input = input.ceil
         else
-          puts "Your number #{is_fb} will be rounded DOWN."
-          is_fb = is_fb.floor
+          puts "Your number #{input} will be rounded DOWN."
+          input = input.floor
         end
       end
     end
-    print_fizz_buzz(is_fb)
+    print_fizz_buzz(input)
   end
 end
 
