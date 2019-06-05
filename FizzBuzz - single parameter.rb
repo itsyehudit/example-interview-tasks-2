@@ -20,30 +20,27 @@ def fizz_buzz
     input = Float(input)
   rescue ArgumentError => e
     puts "Improper value: #{e.class.name}, try again."
-    is_float = false
+    fizz_buzz
+    exit
   end
 
-  if is_float == false
-    fizz_buzz
+  if input%1 == 0
   else
-    if input%1 == 0
-    else
-      puts "Would you like to round your number #{input}? Y/N"
-      q = gets.chomp.downcase
-      if q == "y"
-        puts "Would you like to round your number #{input} UP? Y/N"
-        updown = gets.chomp.downcase
-        if updown == "y"
-          puts "Your number #{input} will be rounded UP."
-          input = input.ceil
-        else
-          puts "Your number #{input} will be rounded DOWN."
-          input = input.floor
-        end
+    puts "Would you like to round your number #{input}? Y/N"
+    q = gets.chomp.downcase
+    if q == "y"
+      puts "Would you like to round your number #{input} UP? Y/N"
+      updown = gets.chomp.downcase
+      if updown == "y"
+        puts "Your number #{input} will be rounded UP."
+        input = input.ceil
+      else
+        puts "Your number #{input} will be rounded DOWN."
+        input = input.floor
       end
     end
-    print_fizz_buzz(input)
   end
+  print_fizz_buzz(input)
 end
 
 fizz_buzz
