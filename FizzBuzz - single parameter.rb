@@ -19,8 +19,8 @@ def fizz_buzz
 
   begin
     is_fb = Float(is_fb)
-  rescue
-    puts "Improper value, try again."
+  rescue ArgumentError => e
+    puts "Improper value: #{e.class.name}, try again."
     is_float = false
   end
 
