@@ -1,14 +1,14 @@
-def leftPad
+def left_pad
   puts "Choose a word:"
-  stringIn = gets.chomp
+  string_in = gets.chomp
   puts "Choose a number:"
-  timesIn = gets.to_i
+  times_in = gets.to_i
   puts "Choose a character:"
-  charIn = gets.chomp
+  char_in = gets.chomp
 
-  chars = charIn * timesIn
+  chars = char_in * times_in
 
-  print "Your characters&word coctail is: #{chars}#{stringIn}."
+  print "Your characters&word coctail is: #{chars}#{string_in}."
 end
 
-leftPad
+left_pad
