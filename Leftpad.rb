@@ -5,6 +5,9 @@ def left_pad(string = "You are extremely lazy, Kid", times = 1, char = " ")
   times_in = gets.to_i
   puts "Choose a character:"
   char_in = gets.chomp
+  puts "Would you like to have your word of choice before all the other characters? Y/N"
+  bool = gets.chomp
+  bool.downcase!
 
   if string_in == nil || string_in == ""
     string_in = string
@@ -20,7 +23,11 @@ def left_pad(string = "You are extremely lazy, Kid", times = 1, char = " ")
 
   chars = char_in * times_in
 
-  print "Your characters&word coctail is: #{chars}#{string_in}."
+  if bool == "y"
+    print "Your word&characters coctail is: #{string_in}#{chars}."
+  else
+    print "Your characters&word coctail is: #{chars}#{string_in}."
+  end
 end
 
 left_pad
