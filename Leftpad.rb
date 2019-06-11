@@ -23,6 +23,10 @@ def left_pad(string = "You are extremely lazy, Kid", times = 1, char = " ")
 
   chars = char_in * times_in
 
+  if char_in.length > 1
+    puts "I\'ve asked you for *a* character, but ok:"
+  end
+
   if bool == "y"
     puts "Your word&characters coctail is: #{string_in}#{chars}."
   else
