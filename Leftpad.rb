@@ -9,15 +9,15 @@ def left_pad(string = "You are extremely lazy, Kid", times = 1, char = " ")
   bool = gets.chomp
   bool.downcase!
 
-  if string_in == nil || string_in == ""
+  if string_in == ""
     string_in = string
   end
 
-  if times_in == nil || times_in == ""
+  if times_in == ""
     times_in = times
   end
 
-  if char_in == nil || char_in == ""
+  if char_in == ""
     char_in = char
   end
 
