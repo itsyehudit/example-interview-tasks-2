@@ -24,9 +24,9 @@ def left_pad(string = "You are extremely lazy, Kid", times = 1, char = " ")
   chars = char_in * times_in
 
   if bool == "y"
-    print "Your word&characters coctail is: #{string_in}#{chars}."
+    puts "Your word&characters coctail is: #{string_in}#{chars}."
   else
-    print "Your characters&word coctail is: #{chars}#{string_in}."
+    puts "Your characters&word coctail is: #{chars}#{string_in}."
   end
 end
 
