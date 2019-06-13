@@ -42,15 +42,15 @@ def fizz_buzz(input)
 end
 
 array_fb = []
-repeat = "y"
 
-while repeat == "y"
+loop do
   puts "Pick a number:"
   input = gets.chomp
   input = input.gsub(/,/, '.')
   array_fb.push(input)
   puts "Would you like to add another number? Y/N?"
   repeat = gets.chomp.downcase
+  break if repeat != "y"
 end
 
 array_fb.each do |element|
