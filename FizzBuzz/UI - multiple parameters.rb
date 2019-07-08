@@ -1,4 +1,4 @@
-require_relative 'FizzBuzz_logic'
+require_relative 'logic'
 
 fb_case = Fizz_Buzz.new
 
