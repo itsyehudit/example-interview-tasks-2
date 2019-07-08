@@ -1,4 +1,4 @@
-require_relative 'LeftPad_logic'
+require_relative 'logic'
 
 lp_case = Left_Pad.new
 
