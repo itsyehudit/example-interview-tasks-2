@@ -1,17 +1,8 @@
-def print_fizz_buzz(is_fb)
-  if
-    is_fb%3 == 0 && is_fb%5 == 0
-    puts "FizzBuzz"
-  elsif is_fb%3 == 0
-    puts "Fizz"
-  elsif is_fb%5 == 0
-    puts "Buzz"
-  else
-    puts "No FizzBuzz for you, sport!"
-  end
-end
+require_relative 'FizzBuzz_logic'
 
-def fizz_buzz(input)
+fb_case = Fizz_Buzz.new
+
+def fizz_buzz(input, fb_case)
   begin
     input = Float(input)
   rescue ArgumentError => e
@@ -37,7 +28,7 @@ def fizz_buzz(input)
         end
       end
     end
-    print_fizz_buzz(input)
+    puts fb_case.print_fizz_buzz(input)
   end
 end
 
@@ -54,5 +45,5 @@ loop do
 end
 
 array_fb.each do |element|
-  fizz_buzz(element)
+  fizz_buzz(element, fb_case)
 end
