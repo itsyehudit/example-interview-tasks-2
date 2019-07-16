@@ -1,4 +1,4 @@
-require_relative 'logic'
+require_relative 'fizz_buzz'
 
 class UISingleParameter
   def initialize
