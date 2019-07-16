@@ -1,8 +1,8 @@
 require_relative 'logic'
 
-class UI_Left_Pad
+class UILeftPad
   def initialize
-    @lp_case = Left_Pad.new
+    @lp_case = LeftPad.new
   end
 
   def left_pad_input
@@ -32,5 +32,5 @@ class UI_Left_Pad
   end
 end
 
-left_pad = UI_Left_Pad.new
+left_pad = UILeftPad.new
 left_pad.left_pad_input

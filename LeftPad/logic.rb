@@ -1,4 +1,4 @@
-class Left_Pad
+class LeftPad
   def left_pad(string, times, char, bool)
     chars = char * times
 
