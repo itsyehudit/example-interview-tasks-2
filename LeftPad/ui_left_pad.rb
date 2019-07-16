@@ -1,4 +1,4 @@
-require_relative 'logic'
+require_relative 'left_pad'
 
 class UILeftPad
   def initialize
