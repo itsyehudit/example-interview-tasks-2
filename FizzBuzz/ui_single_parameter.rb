@@ -18,8 +18,7 @@ class UISingleParameter
       exit
     end
 
-    if input%1 == 0
-    else
+    unless input%1 == 0
       puts "Would you like to round your number #{input}? Y/N"
       q = gets.chomp.downcase
       if q == "y"
