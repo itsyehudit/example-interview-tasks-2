@@ -1,8 +1,8 @@
 require_relative 'logic'
 
-class UI_single_parameter
+class UISingleParameter
   def initialize
-    @fb_case = Fizz_Buzz.new
+    @fb_case = FizzBuzz.new
   end
 
   def fizz_buzz_input
@@ -38,5 +38,5 @@ class UI_single_parameter
   end
 end
 
-fizz_buzz = UI_single_parameter.new
+fizz_buzz = UISingleParameter.new
 fizz_buzz.fizz_buzz_input

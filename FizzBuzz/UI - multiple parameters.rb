@@ -1,8 +1,8 @@
 require_relative 'logic'
 
-class UI_multiple_parameters
+class UIMultipleParameters
   def initialize
-    @fb_case = Fizz_Buzz.new
+    @fb_case = FizzBuzz.new
   end
 
   def fizz_buzz_input(input, fb_case)
@@ -54,5 +54,5 @@ class UI_multiple_parameters
   end
 end
 
-fizz_buzz = UI_multiple_parameters.new
+fizz_buzz = UIMultipleParameters.new
 fizz_buzz.fizz_buzz_multiple_input

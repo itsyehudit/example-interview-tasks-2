@@ -1,4 +1,4 @@
-class Fizz_Buzz
+class FizzBuzz
   def print_fizz_buzz(is_fb)
     if is_fb%3 == 0 && is_fb%5 == 0
       "FizzBuzz"
