@@ -13,8 +13,8 @@ class UILeftPad
     puts "Choose a character:"
     char_in = gets.chomp
     puts "Would you like to have your word of choice before all the other characters? Y/N"
-    bool_in = gets.chomp
-    bool_in.downcase!
+    reverse_in = gets.chomp
+    reverse_in.downcase!
 
     if string_in == ""
       string_in = "You are extremely lazy, Kid"
@@ -28,7 +28,7 @@ class UILeftPad
       char_in = " "
     end
 
-    puts @lp_case.left_pad(string_in, times_in, char_in, bool_in)
+    puts @lp_case.left_pad(string_in, times_in, char_in, reverse_in)
   end
 end
 
