@@ -13,10 +13,8 @@ class UIMultipleParameters
       is_float = false
     end
 
-    if is_float == false
-    else
-      if input%1 == 0
-      else
+    unless is_float == false
+      unless input%1 == 0
         puts "Would you like to round your number #{input}? Y/N"
         q = gets.chomp.downcase
         if q == "y"
