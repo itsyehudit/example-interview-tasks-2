@@ -1,4 +1,4 @@
-require_relative '../logic'
+require_relative '../left_pad'
 
 RSpec.describe LeftPad do
   it "combines input string with characters of choice repeated by specified number of times" do
