@@ -1,20 +1,20 @@
 require_relative '../logic'
 
-RSpec.describe Left_Pad do
+RSpec.describe LeftPad do
   it "combines input string with characters of choice repeated by specified number of times" do
-    left = Left_Pad.new
+    left = LeftPad.new
     string_l = "lefty"
     times_l = 3
     char_l = "x"
     bool_l = "y"
 
-    right = Left_Pad.new
+    right = LeftPad.new
     string_r = "righty"
     times_r = 4
     char_r = "x"
     bool_r = "n"
 
-    taunted = Left_Pad.new
+    taunted = LeftPad.new
     string_t = "taunting"
     times_t = 2
     char_t = "xyz"
