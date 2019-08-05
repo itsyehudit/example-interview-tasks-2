@@ -1,4 +1,4 @@
-require_relative 'FizzBuzz_logic'
+require_relative '../fizz_buzz'
 
 RSpec.describe Fizz_Buzz do
   it "checks if input is divisible by 3, 5 or 15" do
