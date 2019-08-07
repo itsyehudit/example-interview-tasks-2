@@ -1,17 +1,17 @@
-require_relative 'FizzBuzz_logic'
+require_relative '../fizz_buzz'
 
-RSpec.describe Fizz_Buzz do
+RSpec.describe FizzBuzz do
   it "checks if input is divisible by 3, 5 or 15" do
-    fizz = Fizz_Buzz.new
+    fizz = FizzBuzz.new
     input_fizz = 3
 
-    buzz = Fizz_Buzz.new
+    buzz = FizzBuzz.new
     input_buzz = 5
 
-    fizz_buzz = Fizz_Buzz.new
+    fizz_buzz = FizzBuzz.new
     input_fizz_buzz = 15
 
-    no_fizz_buzz = Fizz_Buzz.new
+    no_fizz_buzz = FizzBuzz.new
     input_no_fizz_buzz = 7
 
     expect(fizz.print_fizz_buzz(input_fizz)).to eq("Fizz")
